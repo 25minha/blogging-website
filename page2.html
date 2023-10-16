@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MARACOT DEEP</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: url('/home/madhavam/Desktop/blogging website/tech.jpg') center/cover no-repeat;
+      color: #f7fcfc;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+    }
+
+    header img {
+      max-width: 20px;
+      margin-right: 10px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .jumbotron {
+      padding: 2rem;
+      margin-top: 80px;
+      text-align: center;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #fff;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: type 4s steps(50, end) infinite;
+    }
+
+    .caption {
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+
+    @keyframes type {
+      from {
+        width: 0;
+      }
+    }
+
+    .footer {
+      color: #34A0A4;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer form {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer input {
+      padding: 10px;
+      margin-right: 10px;
+      width: 100px;
+    }
+
+    .footer button {
+      padding: 10px;
+      background-color: #555;
+      color: #eee8e8d5;;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .footer button:hover {
+      background-color: #34A0A4
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <!-- Logo and Website Name -->
+    <div>
+      <img src='/home/madhavam/Desktop/blogging website/logo.png' alt="MARACOT DEEP Logo">
+      <p>Express Fintech Ideas</p>
+    </div>
+
+    <!-- Navigation Bars -->
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Blogs</a>
+      <a href="#">Create</a>
+      <a href="#" id="signin">Sign In</a>
+      <a href="#" id="signup">Sign Up</a>
+    </nav>
+  </header>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <h1>MARACOT DEEP</h1>
+    <p class="caption">Learn. Innovate. Invest & Inspire</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <!-- Sign Up Form -->
+    <form id="signup-form">
+      <input type="text" placeholder="Email">
+      <input type="password" placeholder="Create Password">
+      <input type="password" placeholder="Confirm Password">
+      <button>Sign Up</button>
+    </form>
+
+    <!-- Sign In Form -->
+    <form id="signin-form">
+      <input type="text" placeholder="Username">
+      <input type="password" placeholder="Password">
+      <button>Sign In</button>
+    </form>
+  </div>
+
+  <script>
+    // Change the dynamic caption
+    document.querySelector('.caption').innerText = 'Learn. Innovate. Invest & Inspire';
+
+    // Optional Sign In and Sign Up
+    document.getElementById('signin').addEventListener('click', function() {
+      document.getElementById('signin-form').style.display = 'flex';
+      document.getElementById('signup-form').style.display = 'none';
+    });
+
+    document.getElementById('signup').addEventListener('click', function() {
+      document.getElementById('signup-form').style.display = 'flex';
+      document.getElementById('signin-form').style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

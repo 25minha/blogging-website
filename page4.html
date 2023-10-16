@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech Blogs</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #04271e;
+        }
+
+        header {
+            background-color:#04271e;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .blog img {
+            max-width: 100px;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            width: 200px;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fintech Blogs</h1>
+    </header>
+
+    <main>
+        <div>
+            <label for="searchPublisher">Search by Publisher:</label>
+            <input type="text" id="searchPublisher" placeholder="Enter publisher">
+            <button onclick="searchByPublisher()">Search</button>
+        </div>
+
+        <div>
+            <label for="searchTitle">Search by Title:</label>
+            <input type="text" id="searchTitle" placeholder="Enter title">
+            <button onclick="searchByTitle()">Search</button>
+        </div>
+
+        <div id="blogsContainer">
+            <!-- Blogs will be dynamically added here -->
+        </div>
+        <nav>
+            <a href="page_21.html">Home</a>
+          </nav>
+      </div>
+    
+    </main>
+
+    <script>
+        // Example data (replace with your actual blog data)
+        const blogs = [
+            { title: 'Financial Inclusion: Bridging the Gap', publisher: 'Nandhana P', image: 'blog1.jpg', content: 'Blockchain has the power to bring financial services to the unbanked and underbanked populations. With its decentralized and borderless nature, blockchain technology opens up opportunities for individuals in regions with limited access to traditional banking infrastructure.' },
+            { title: 'Fortifying Cybersecurity: The Role of Artificial Intelligence', publisher: 'Pooja M', image: 'blog2.jpeg', content: 'In the digital age, where data is the new currency, the need for robust cybersecurity has never been more critical. As cyber threats become more sophisticated, traditional security measures are often inadequate. Enter artificial intelligence, a game-changer in the ongoing battle to secure our digital world. Today, we delve into the symbiotic relationship between AI and cybersecurity.' },
+            // Add more blogs as needed
+        ];
+
+        // Function to display blogs
+        function displayBlogs(blogsToShow) {
+            const blogsContainer = document.getElementById('blogsContainer');
+            blogsContainer.innerHTML = '';
+
+            blogsToShow.forEach(blog => {
+                const blogElement = document.createElement('div');
+                blogElement.classList.add('blog');
+
+                const imageElement = document.createElement('img');
+                imageElement.src = blog.image;
+                blogElement.appendChild(imageElement);
+
+                const contentElement = document.createElement('div');
+                const titleElement = document.createElement('h2');
+                titleElement.textContent = blog.title;
+                const publisherElement = document.createElement('p');
+                publisherElement.textContent = `Published by: ${blog.publisher}`;
+                const contentTextElement = document.createElement('p');
+                contentTextElement.textContent = blog.content;
+
+                contentElement.appendChild(titleElement);
+                contentElement.appendChild(publisherElement);
+                contentElement.appendChild(contentTextElement);
+
+                blogElement.appendChild(contentElement);
+
+                blogsContainer.appendChild(blogElement);
+            });
+        }
+
+        // Function to filter blogs by publisher
+        function searchByPublisher() {
+            const searchPublisherValue = document.getElementById('searchPublisher').value.toLowerCase();
+            const filteredBlogs = blogs.filter(blog => blog.publisher.toLowerCase().includes(searchPublisherValue));
+            displayBlogs(filteredBlogs);
+        }
+
+        // Function to filter blogs by title
+        function searchByTitle() {
+            const searchTitleValue = document.getElementById('searchTitle').value.toLowerCase();
+            const filteredBlogs = blogs.filter(blog => blog.title.toLowerCase().includes(searchTitleValue));
+            displayBlogs(filteredBlogs);
+        }
+
+        // Initial display of all blogs
+        displayBlogs(blogs);
+    </script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MARACOT DEEP</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: url('/home/madhavam/Desktop/blogging website/tech.jpg') center/cover no-repeat;
+      color: #e4f1ed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+    body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+
+    header {
+      padding: 30px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+    }
+
+    header img {
+      max-width: 30px;
+      margin-right: 10px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .jumbotron {
+      padding: 2rem;
+      margin-top: 80px;
+      text-align: center;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3rem;
+      |margin-bottom: 10px;*/
+      color: #fff;
+    }
+
+    .caption {
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+
+    .footer {
+      color: #fff;
+      text-align: center;
+      padding: 45px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #063b37;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-content a {
+      color: #030101;
+      text-decoration: none;
+      margin: 0 30px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-content a:hover {
+      color: #aaa;
+    }
+
+    .footer img {
+      max-width: 30px;
+      margin: 0 px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <!-- Logo and Website Name -->
+    <div>
+      <img src='logo.png' alt="MARACOT DEEP Logo">
+      <p>Your excellent fintech partner! </p>
+    </div>
+
+    <!-- Navigation Bars -->
+    <nav>
+      <a href="#">Home</a>
+      <a href="page1.html">About</a>
+      <a href="page4.html">Blogs</a>
+      <a href="page 31.html">Create</a>
+      <a href="#" id="toggle-signin">Sign In</a>
+      <a href="#" id="toggle-signup">Sign Up</a>
+    </nav>
+  </header>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <h1>MARACOT DEEP</h1>
+    <p class="caption">Learn. Innovate. Invest & Inspire</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-content">
+      <!-- Links -->
+      <a href="#">Terms of Service</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact Us</a>
+
+      <!-- Social Media Icons -->
+      <img src="instagram.svg" alt="Instagram Logo">
+      <img src="facebook(1).svg" alt="Facebook Logo">
+      <img src="x-twitter.svg" alt="Twitter Logo">
+    </div>
+  </div>
+
+  <!-- Sign Up Form -->
+  <div class="footer" id="signup-form" style="display: none;">
+    <form>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Create Password">
+      <input type="password" placeholder="Confirm Password">
+      <button>Sign Up</button>
+    </form>
+  </div>
+
+  <!-- Sign In Form -->
+  <div class="footer" id="signin-form" style="display: none;">
+    <form>
+      <input type="text" placeholder="Username">
+      <input type="password" placeholder="Password">
+      <button>Sign In</button>
+    </form>
+  </div>
+
+  <script>
+    // Toggle Sign In and Sign Up Forms
+    document.getElementById('toggle-signin').addEventListener('click', function() {
+      document.getElementById('signin-form').style.display = 'flex';
+      document.getElementById('signup-form').style.display = 'none';
+    });
+
+    document.getElementById('toggle-signup').addEventListener('click', function() {
+      document.getElementById('signup-form').style.display = 'flex';
+      document.getElementById('signin-form').style.display = 'none';
+    });
+
+    // Set the background image source here
+const backgroundImageSource = 'path/to/your/image.jpg';
+
+// Create a new image element
+const backgroundImage = new Image();
+backgroundImage.src = backgroundImageSource;
+
+  </script>
+
+</body>
+</html>
+
+
+  

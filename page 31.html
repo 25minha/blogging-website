@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Blogging Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color:#084134;
+    }
+
+    header {
+      background-color: #084134;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+    .logo {
+    width: 50px; /* Adjust the width as needed */
+    height: auto;
+    }
+
+    header h1 {
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    nav {
+      background-color: #444;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    #blog-form {
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    textarea {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"], input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #010f0b;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+    .logo {
+    width: 50px; /* Adjust the width as needed */
+    height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+        <img src="logo.png" alt="Maracot Deep Logo" class="logo">
+    </div>
+    <h1>Your Fintech Content,Publish Here!!</h1>
+  </header>
+
+  <div id="blog-form">
+    <label for="blog-heading">Blog Heading:</label>
+    <input type="text" id="blog-heading" placeholder="Enter your blog heading">
+
+    <label for="blog-content">Blog Content:</label>
+    <textarea id="blog-content" placeholder="Write your blog content"></textarea>
+
+    <label for="publish-date">Publish Date:</label>
+    <input type="date" id="publish-date">
+
+    <button onclick="saveBlog()">Save</button>
+    <button onclick="submitBlog()">Submit</button>
+    <button onclick="publishBlog()">Publish</button>
+  </div>
+  <div>
+    <nav>
+        <a href="page_21.html">Home</a>
+      </nav>
+  </div>
+
+  <script>
+    function saveBlog() {
+      alert('Blog saved!');
+    }
+
+    function submitBlog() {
+      alert('Blog submitted!');
+    }
+
+    function publishBlog() {
+      var publishDate = document.getElementById('publish-date').value;
+      alert('Blog published on ' + publishDate + '!');
+    }
+  </script>
+
+</body>
+</html>

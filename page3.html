@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Blogging Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #04271e;
+    }
+
+    header {
+      background-color:#04271e;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    header img {
+        max-height: 200px;
+      max-width: 30px;
+      margin-bottom: auto;
+    }
+
+    header h1 {
+      display: inline-block;
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+
+    #blog-form {
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    textarea {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"], input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo">
+    <h1>Simple Blogging Page</h1>
+  </header>
+
+  <div id="blog-form">
+    <label for="blog-heading">Blog Heading:</label>
+    <input type="text" id="blog-heading" placeholder="Enter your blog heading">
+
+    <label for="blog-content">Blog Content:</label>
+    <textarea id="blog-content" placeholder="Write your blog content"></textarea>
+
+    <label for="publish-date">Publish Date:</label>
+    <input type="date" id="publish-date">
+
+    <button onclick="saveBlog()">Save</button>
+    <button onclick="submitBlog()">Submit</button>
+    <button onclick="publishBlog()">Publish</button>
+  </div>
+
+  <script>
+    function saveBlog() {
+      alert('Blog saved!');
+    }
+
+    function submitBlog() {
+      alert('Blog submitted!');
+    }
+
+    function publishBlog() {
+      var publishDate = document.getElementById('publish-date').value;
+      alert('Blog published on ' + publishDate + '!');
+    }
+  </script>
+
+</body>
+</html>
